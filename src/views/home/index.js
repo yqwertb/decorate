@@ -1,7 +1,6 @@
 import React from "react";
-import './style/App.css';
 
-export default class App extends React.Component {
+export default class Home extends React.Component {
     constructor(props) {
         super(props);
 
@@ -9,8 +8,11 @@ export default class App extends React.Component {
 
     render() {
         return (
-            <div className="App">
-                {this.props.children}
+            <div >
+                <div>
+                    55555555555
+
+                </div>
             </div>
         );
     }
