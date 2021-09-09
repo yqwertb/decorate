@@ -14,18 +14,35 @@ import zhCN from 'antd/lib/locale/zh_CN';
 export default class RouterComponent extends React.Component {
 
     render() {
+        let isLogin = sessionStorage.getItem('token')
         return (
             <>
                 <BrowserRouter>
                     <ConfigProvider locale={zhCN}>
                         <App>
                             <Switch>
+                                <Route exact path="/login" component={Login}/>
+                                {/*<Route exact path="/" component={() => {*/}
+                                {/*    console.log(this.history);*/}
+                                {/*    // if(isLogin) {*/}
+                                {/*    //     return (<Wrapper/>)*/}
+                                {/*    // } else {*/}
+                                {/*    //    this.props.history.push('/login')*/}
+                                {/*    // }*/}
+                                {/*}}/>*/}
                                 <Wrapper>
+                                    {/*<Route exact path="/" component={() => {*/}
+                                    {/*    if(isLogin) {*/}
+                                    {/*        return (<Wrapper/>)*/}
+                                    {/*    } else {*/}
+                                    {/*        this.props.history.push('/login')*/}
+                                    {/*    }*/}
+                                    {/*}}/>*/}
                                     <Route exact path="/" component={Home}/>
                                     <Route path="/users" component={Users}/>
                                     <Route path="/order" component={Order}/>
                                 </Wrapper>
-                                <Route path="/login" component={Login}/>
+
                             </Switch>
                         </App>
                     </ConfigProvider>
